@@ -1,0 +1,14 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 開発中のみ: 全許可したい場合は下記を有効化し、必ず戻すこと
+    // match /{document=**} { allow read, write: if true; }
+
+    // 本番想定（認証必須）
+    match /{document=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
+
+
