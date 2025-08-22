@@ -1,16 +1,7 @@
 # todo_reminder
 
-A new Flutter project.
+シンプルなリマインダー管理アプリ（Flutter）。Firestore に保存された予定を一覧し、作成・完了を行います。将来的に Cloud Functions からメール/LINE 送信を行う構成を想定しています。
 
-## Getting Started
+## セットアップ
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+前提: FVM を使用します（Flutter SDK のバージョン固定）。

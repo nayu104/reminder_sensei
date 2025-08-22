@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -12,6 +13,8 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   await initializeDateFormatting('ja');
+  //Firebase　ルールが認証必須のため、匿名サインイン
+  await FirebaseAuth.instance.signInAnonymously();
   runApp(
     const ProviderScope(child: MyApp()),
   );
